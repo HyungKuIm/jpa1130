@@ -1,0 +1,7 @@
+package com.oraclejava.repository;
+
+import com.oraclejava.domain.Comment;
+
+public interface CommentRepository {
+	Iterable<Comment> findByArticleId(int articleId);
+}

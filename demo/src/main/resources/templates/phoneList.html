@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 th:text="#{content.title}"></h1>
+	<div th:fragment="frag_body">
+		<table border="1">
+			<tr>
+				<th>폰이름</th>
+				<th>폰크기</th>
+				<th>통신방식</th>
+				<th>가격</th>
+			</tr>
+			<tr th:each="pho:${phonelist}">
+				<td th:text="${pho.name}"></td>
+				<td th:text="${pho.size}"></td>
+				<td th:text="${pho.comm}"></td>
+				<td th:text="${pho.price}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

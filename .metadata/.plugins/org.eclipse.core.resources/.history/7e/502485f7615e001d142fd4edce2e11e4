@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>뭔가 찾으시는 거 있으세요...</h1>
+	<form th:action="@{/product}" method="post">
+		<input type="text" name="keyword">
+		<input type="submit" value="검색">
+	</form>
+	<hr>
+	<table style="border-collapse: separate; border-spacing: 10px;">
+		<tr th:each="product : ${list}">
+			<td>상품[[${product.id}]]</td>
+			<td><img th:src="@{'/image/' + ${product.id} + '.jpg'}" 
+				height="64"></td>
+			<td>[[${product.name}]]</td>
+			<td>[[${product.price}]]원</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>part page</title>
+</head>
+<body>
+	<h1>Part Page</h1>
+	<div th:fragment="frag_body">
+		<h2>블랙팬서 3 - 더 파이널...</h2>
+	</div>
+</body>
+</html>

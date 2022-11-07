@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>뭔가 찾으시는 거 있으세요...</h1>
+	<form th:action="@{/product}" method="post">
+		<input type="text" name="keyword"
+	</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+package com.oraclejava.domain;
+
+import java.io.Serializable;
+import java.util.Date;
+
+public class Employee implements Serializable {
+	private Integer employeeId; // 사번
+	private String firstName; //이름
+	private String lastName; // 성
+	private String email; // 이mail
+	private String phoneNumber; // 폰넘버
+	private Date hireDate; // 입사일
+	private String jobId; // 잡 아이디
+	private Double salary; // 급여
+	private Double commissionPct;  // 수당(건당 퍼센트 비율)
+	private Integer managerId; // 매니저 id
+	private Integer departmentId; // 부서 id
+	
+	
+	
+	//...
+	
+	//생성자 2개
+	//get, set
+}

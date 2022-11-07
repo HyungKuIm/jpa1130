@@ -1,0 +1,8 @@
+package com.oraclejava.form;
+
+public class ArticleForm {
+	private String name;
+	private String content;
+	
+	
+}

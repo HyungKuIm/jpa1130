@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 th:text="#{content.title}"></h1>
+	
+	<table border="1" th:object="${phone}">
+		<tr><th>폰이름</th><td th:text="*{name}"></td></tr>
+		<tr><th>폰크기(cm)</th><td th:text="|*{size} cm|"></td></tr>
+		<tr><th>통신방식</th><td th:text="*{comm}"></td></tr>
+		<tr><th>가격</th><td th:text="|#numbers.format(*{price},7,'COMMA') 원|"></td></tr>
+		<tr><th>등급</th><td th:text="*{price} >= 1500000 ? '귀족폰' : '아재폰'"></td></tr>
+		<tr>
+			<th>등급2</th>
+			<td th:if="*{price} >= 1500000">귀족폰</td>
+			<td th:if="*{price} >= 1000000 and *{price} < 1500000">아재폰</td>
+			<td th:if="*{price} >= 500000 and *{price} < 1000000">학생폰</td>
+			<td th:unless="*{price} >= 500000">거지폰</td>
+		</tr>
+	</table>
+	
+</body>
+</html>

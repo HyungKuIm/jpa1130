@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>top page</title>
+<style>
+	h1 {
+		font-size:18pt;
+		font-weight: bold;
+		color: gray;
+	}
+</style>
+<style th:include="part :: frag_style"></style>
+</head>
+<body>
+	<h1 th:text="#{content.title}"></h1>
+	<div th:include="${content}">
+		<p>여기는 메인 컨텐츠가 들어갈 곳입니다.</p>
+	</div>
+</body>
+</html>

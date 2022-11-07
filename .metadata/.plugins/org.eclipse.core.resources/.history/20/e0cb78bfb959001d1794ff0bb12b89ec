@@ -1,0 +1,32 @@
+package com.oraclejava.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.oraclejava.domain.Article;
+import com.oraclejava.repository.ArticleRepository;
+
+@Controller
+public class ArticleController {
+
+	private ArticleRepository articleRepository;
+
+	public ArticleController(ArticleRepository articleRepository) {
+		super();
+		this.articleRepository = articleRepository;
+	}
+	
+	@RequestMapping("/board")
+	public String findAll(Model model) {
+		List<Article> arti = new ArrayList<>();
+		
+		articleRepository.findAll().forEach(e -> arti.add(e));
+		
+		model.addAttribute("arti", arti);
+		return "board";
+	}
+}

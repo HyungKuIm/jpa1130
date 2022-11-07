@@ -1,0 +1,13 @@
+package com.oraclejava.controller;
+
+import org.springframework.stereotype.Controller;
+
+import com.oraclejava.repository.EmpRepository;
+
+@Controller
+public class EmpController {
+
+	private EmpRepository empRepository;
+	
+	
+}

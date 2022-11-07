@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+	<h3>글쓰기</h3>
+	
+	<form th:action="@{'/board/write_ok'}"
+		  th:object="${articleForm}"
+		  method="post">
+		  <div th:errors="*{name}" class="error-messages"></div>
+		  글쓴이: <input type="text" name="name" th:field="*{name}"> <br>
+		  <div th:errors="*{content}" class="error-messages"></div>
+		  글내용:
+		  	<textarea name="content" th:field="*{content}"
+		  		rows="5" cols="25"></textarea> <br>
+		  <input type="submit" value="등록">
+		  
+	</form>
+</body>
+</html>

@@ -1,0 +1,8 @@
+package com.oraclejava.repository;
+
+import com.oraclejava.domain.Article;
+
+public interface ArticleRepository {
+	Iterable<Article> findAll();
+	Article save(Article article);
+}

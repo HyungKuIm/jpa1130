@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>글 상세보기</title>
+</head>
+<body>
+	<div th:object="${article}">
+		id: <span th:text="*{id}"></span> <br>
+		name: <span th:text="*{name}"></span> <br>
+		<p th:text="*{content}"></p>
+	</div>
+</body>
+</html>

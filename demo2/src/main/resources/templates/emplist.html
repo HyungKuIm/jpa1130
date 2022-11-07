@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>사원목록</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>이름</th>
+			<th>성</th>
+		</tr>
+		<tr th:each="e : ${emps}">
+			<td th:text="${e.firstName}"></td>
+			<td th:text="${e.lastName}"></td>
+		</tr>
+	</table>
+</body>
+</html>

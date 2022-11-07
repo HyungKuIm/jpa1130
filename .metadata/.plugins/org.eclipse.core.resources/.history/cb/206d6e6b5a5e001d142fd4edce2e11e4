@@ -1,0 +1,26 @@
+package com.oraclejava.repository;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.oraclejava.domain.Product;
+
+@Repository
+public class JdbcProductRepository implements ProductRepository {
+
+	private JdbcTemplate jdbcTemplate;
+	
+	public JdbcProductRepository(JdbcTemplate jdbcTemplate) {
+		super();
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	@Override
+	public List<Product> search(String keyword) {
+		
+		return null;
+	}
+
+}

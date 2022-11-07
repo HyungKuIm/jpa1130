@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 th:text="#{content.title}"></h1>
+	<p th:text="#{content.message}"></p>
+	<div th:fragment="frag_body">
+		<p>현재 시간은 <span 
+			th:text="${#dates.format(currentDate, 'yyyy/MM/dd HH:mm:ss')}"></span> 입니다.</p>
+		<p>
+			<a th:href="@{'/msg'}">메시지 출력</a>
+		</p>
+	</div>
+</body>
+</html>
