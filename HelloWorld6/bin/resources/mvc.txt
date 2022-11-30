@@ -1,0 +1,12 @@
+컨트롤러: 자바 클래스로 구성,
+    mvc-config.xml 에서 component-scan 에 등록된 패키지 밑에 작성
+    @RestController, @Controller를 붙여준다
+    요청을 받아들여 응답하는 객체
+
+뷰: jsp파일로 구성,
+   mvc-config.xml에서 ViewResolver에서 지정된 위치로 찾는다.
+   사용자에게 보여주는 역할
+
+모델: 뷰에 전달되는 값(=데이터)
+  개발자가 안만들어도 된다. (미리 정의되어 있음)
+  "아름답게" 만들어야 된다

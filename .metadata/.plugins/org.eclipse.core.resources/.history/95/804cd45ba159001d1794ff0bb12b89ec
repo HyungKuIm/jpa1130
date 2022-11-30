@@ -1,8 +1,0 @@
-package com.oraclejava.domain;
-
-import java.io.Serializable;
-
-public class Employee implements Serializable {
-	private Integer employeeId;
-	//...
-}

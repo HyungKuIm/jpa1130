@@ -1,9 +1,0 @@
-package com.oraclejava.domain;
-
-public class Phone {
-	private String name;  //폰이름 (갤럭시 와이드 6)
-	private double size;  //폰사이즈(165.5)
-	private String comm;  //통신방식(5G)
-	
-	// get, set
-}
