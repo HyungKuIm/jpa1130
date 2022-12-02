@@ -21,6 +21,7 @@ public class LoginService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) 
 			throws UsernameNotFoundException {
+		System.out.println(username);
 		//유저이름으로 검색
 		KbUser user = kbUserRepository.findByUsername(username)
 					.orElseThrow(() -> new UsernameNotFoundException("그런 유저 없습니다"));
